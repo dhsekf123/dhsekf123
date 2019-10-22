@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <style>
+            body  {
+                  background-image: url('https://cdn.pixabay.com/photo/2017/08/12/10/13/background-2633962_960_720.jpg')
+            }
+ </style>
+<style>
+* { box-sizing: border-box;}
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+        <title>사진 강혁준, 전창훈 3조 발표자료</title>
+</head>
+<body>
+     <a href="1.html"><img src="C:\Users\USER\Desktop\발표자료 html 파일\music\logo.png"/></a>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for image.." title="Type in a image">
+<ul id="myUL">
+  <li><a href="C:\Users\USER\Desktop\발표자료 html 파일\music\겨울.jpg">겨울</a></li>
+  <li><a href="C:\Users\USER\Desktop\발표자료 html 파일\music\물새떼.jpg">물새떼</a></li>
+  <li><a href="C:\Users\USER\Desktop\발표자료 html 파일\music\바다.jpg">바다</a></li>
+  <li><a href="C:\Users\USER\Desktop\발표자료 html 파일\music\불꽃축제.jpg">불꽃축제</a></li>
+  <li><a href="C:\Users\USER\Desktop\발표자료 html 파일\music\사막.jpg">사막</a></li>
+  <li><a href="C:\Users\USER\Desktop\발표자료 html 파일\music\저녁노을.jpg">저녁노을</a></li>
+  <li><a href="C:\Users\USER\Desktop\발표자료 html 파일\music\제주도.jpg">제주도</a></li>
+  <li><a href="C:\Users\USER\Desktop\발표자료 html 파일\music\파리.jpg">파리</a></li>
+</ul>
+</body>
+</html>

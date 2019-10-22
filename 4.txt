@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body  {
+                  background-image: url('https://cdn.pixabay.com/photo/2019/04/13/20/51/music-background-4125573_960_720.jpg')
+            }
+ </style>
+<style>
+* { box-sizing: border-box;}
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+        <title>사진 강혁준, 전창훈 3조 발표자료</title>
+</head>
+<body>
+     <a href="1.html"><img src="C:\Users\USER\Desktop\발표자료 html 파일\music\logo.png"/></a>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for music.." title="Type in a music">
+<ul id="myUL">
+  <li><a href="https://t1.daumcdn.net/cfile/tistory/2261C6385855113745?original">경쾌한 배경음악 1</a></li>
+  <li><a href="https://t1.daumcdn.net/cfile/tistory/210399405854D66025?original">피아노 배경음악 1</a></li>
+  <li><a href="https://t1.daumcdn.net/cfile/tistory/210F303A5855051E1B?original">웅장한 배경음악 1</a></li>
+  <li><a href="https://t1.daumcdn.net/cfile/tistory/25544F455854CF9907?original">경쾌한 배경음악 2</a></li>
+  <li><a href="https://t1.daumcdn.net/cfile/tistory/2672243B5855067C16?original">평화로운 배경음악 1</a></li>
+  <li><a href="https://t1.daumcdn.net/cfile/tistory/23663547585652B116?original">경쾌한 배경음악 3</a></li>
+  <li><a href="https://t1.daumcdn.net/cfile/tistory/270EB53F58550F8D0D?original">피아노 노래 2</a></li>
+  <li><a href="https://t1.daumcdn.net/cfile/tistory/25440A435854FBB805?original">공포스러운 배경음악 1</a></li>
+  <li><a href="https://t1.daumcdn.net/cfile/tistory/265BF74B5854C5091A?original">긴장감 있는 배경음악 </a></li>
+  <li><a href="https://t1.daumcdn.net/cfile/tistory/232701435854D77602?original">많이 쓰이는 배경음악 1 </a></li>
+  <li><a href="https://t1.daumcdn.net/cfile/tistory/27510D425854D91F34?original">많이 쓰이는 배경음악 2 </a></li>
+  <li><a href="https://t1.daumcdn.net/cfile/tistory/2468903D5854DB1208?original">조용한 배경음악 </a></li>
+  <li><a href="https://t1.daumcdn.net/cfile/tistory/214FB9375854DE6D04?original">징글벨 노래 </a></li>
+  <li><a href="https://t1.daumcdn.net/cfile/tistory/2431C3375854E09125?original">재미있는 노래 </a></li>
+</ul>
+</body>
+</html>
