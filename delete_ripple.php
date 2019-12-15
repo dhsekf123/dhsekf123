@@ -1,13 +1,15 @@
 <?
       include "../lib/dbconn.php";
 
-      $sql = "delete from free_ripple where num=$ripple_num";
+      $sql = "delete from memo_ripple where num=$num";
       mysql_query($sql, $connect);
       mysql_close();
 
       echo "
 	   <script>
-	    location.href = 'view.php?table=$table&num=$num';
+	    location.href = 'memo.php';
 	   </script>
 	  ";
 ?>
+
+
