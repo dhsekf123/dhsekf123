@@ -1,17 +1,17 @@
 <? 
 	session_start(); 
-	$table = "download";
+	$table = "free";
+	$ripple = "free_ripple";
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head> 
 <meta charset="utf-8">
 <link href="../css/common.css" rel="stylesheet" type="text/css" media="all">
-<link href="../css/board3.css" rel="stylesheet" type="text/css" media="all">
+<link href="../css/board4.css" rel="stylesheet" type="text/css" media="all">
 </head>
 <?
 	include "../lib/dbconn.php";
-
 	$scale=10;			// 한 화면에 표시되는 글 수
 
     if ($mode=="search")
@@ -26,7 +26,6 @@
 			");
 			exit;
 		}
-
 		$sql = "select * from $table where $find like '%$search%' order by num desc";
 	}
 	else
@@ -55,7 +54,6 @@
   <div id="header">
     <? include "../lib/top_login2.php"; ?>
   </div>  <!-- end of header -->
-
   <div id="menu">
 	<? include "../lib/top_menu2.php"; ?>
   </div>  <!-- end of menu --> 
@@ -71,7 +69,7 @@
 
 	<div id="col2">        
 		<div id="title">
-			<img src="../img/title_download.png" width="88">
+			<img src="../img/title_free.png" width="98">
 		</div>
 
 		<form  name="board_form" method="post" action="list.php?table=<?=$table?>&mode=search"> 
@@ -89,7 +87,6 @@
 			<div id="list_search5"><input type="image" src="../img/list_search_button.gif"></div>
 		</div>
 		</form>
-
 		<div class="clear"></div>
 
 		<div id="list_top_title">
@@ -106,25 +103,31 @@
 <?		
    for ($i=$start; $i<$start+$scale && $i < $total_record; $i++)                    
    {
-      mysql_data_seek($result, $i);       
-      // 가져올 레코드로 위치(포인터) 이동  
-      $row = mysql_fetch_array($result);       
-      // 하나의 레코드 가져오기
-	
+      mysql_data_seek($result, $i);     // 포인터 이동        
+      $row = mysql_fetch_array($result); // 하나의 레코드 가져오기	      
+      
 	  $item_num     = $row[num];
 	  $item_id      = $row[id];
 	  $item_name    = $row[name];
   	  $item_nick    = $row[nick];
 	  $item_hit     = $row[hit];
-
       $item_date    = $row[regist_day];
 	  $item_date = substr($item_date, 0, 10);  
-
 	  $item_subject = str_replace(" ", "&nbsp;", $row[subject]);
+
+	  $sql = "select * from $ripple where parent=$item_num";
+	  $result2 = mysql_query($sql, $connect);
+	  $num_ripple = mysql_num_rows($result2);
+
 ?>
 			<div id="list_item">
 				<div id="list_item1"><?= $number ?></div>
-				<div id="list_item2"><a href="view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>"><?= $item_subject ?></a></div>
+				<div id="list_item2"><a href="view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>"><?= $item_subject ?></a>
+<?
+		if ($num_ripple)
+				echo " [$num_ripple]";
+?>
+				</div>
 				<div id="list_item3"><?= $item_nick ?></div>
 				<div id="list_item4"><?= $item_date ?></div>
 				<div id="list_item5"><?= $item_hit ?></div>
@@ -162,10 +165,8 @@
 	}
 ?>
 				</div>
-			</div> <!-- end of page_button -->
-		
+			</div> <!-- end of page_button -->		
         </div> <!-- end of list content -->
-
 		<div class="clear"></div>
 
 	</div> <!-- end of col2 -->
