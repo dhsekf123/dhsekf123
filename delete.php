@@ -1,5 +1,6 @@
 <?
    session_start();
+
    include "../lib/dbconn.php";
 
    $sql = "select * from $table where num = $num";
