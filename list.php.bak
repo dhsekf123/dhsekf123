@@ -71,7 +71,7 @@
 
 	<div id="col2">        
 		<div id="title">
-			<img src="../img/title_download.png" width="88">
+			<img src="../img/title_download.png" width="86">
 		</div>
 
 		<form  name="board_form" method="post" action="list.php?table=<?=$table?>&mode=search"> 
