@@ -1,0 +1,12 @@
+		<div id="sub_title">
+ 			<img src="../img/title_left_menu.png" width="100">
+		</div>
+		<ul>
+		<li>▶ 낙서장</li>
+		<li>▶ 자기 소개</li>
+		<li>▶ 노래 공유</li>
+		<li>▶ 사진 공유</li>
+		<li>▶ 동영상 공유</li>
+		<li>▶ 오류문의</li>
+		<li>▶ 설문조사</li>
+		</ul>
